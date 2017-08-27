@@ -5,15 +5,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Countdown</title>
+  <link href="https://fonts.googleapis.com/css?family=Rokkitt:700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 	</head>
-<body onchange = 'changeColor(this);'>
+<body>
+	<div class="container">
 	<table class="countdownContainer">
 		<tr class="info">
-		<td colspan="4">My Next Birthday</td>
+		<td colspan="4" id="title" onmouseover="changeText()" onmouseout="backToNormal()">My Next Birthday</td>
 		</tr>
-		<tr class="info">
+		<tr class="info" id="time" onmouseover="changeText()" onmouseout="backToNormal()">
 			<td id="days">120</td>
 			<td id="hours">4</td>
 			<td id="minutes">12</td>
@@ -27,8 +31,29 @@
 			<td>Seconds</td>
 		</tr>
 		
-
 	</table>
+
+	<table>
+		<tr class="todo">
+			<td colspan="4">What should I do till then? </td>
+		</tr>
+	</table>
+
+	<script>
+		function changeText() {
+			var text = document.getElementById("title").style.backgroundColor = "red";
+			var time = document.getElementById("time").style.backgroundColor = "blue";
+		}
+
+		function backToNormal() {
+
+			var text = document.getElementById("title").style.backgroundColor = "";
+			var time = document.getElementById("time").style.backgroundColor = "";
+
+		}
+
+	</script>
+
 
 	<script>
 		function countdown() {
@@ -59,28 +84,20 @@
 
 		setTimeout(countdown, 1000); //activates the countdown
 
-
-
-
 		}
 
  countdown();
-
- //change color on click 
- //1) listen for a button click
- //2) when button is clicked will need to say what we want to happen
- //3) 
 
 	</script>
 
 	<script> 
 	var random = Math.floor(Math.random() * 6);
-		var color = new Array("green", "blue", "yellow", "black", "purple", "darkgreen" );
+		var color = new Array("green", "blue", "yellow", "orange", "purple", "darkgreen" );
 		document.body.style.backgroundColor = color[random];
 
-	
-	
 	</script>
+
+
 
 	
 </body>
