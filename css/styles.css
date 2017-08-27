@@ -1,0 +1,23 @@
+body {
+
+	background-color: rgb(76,76,76); // Old browsers
+@include filter-gradient(#4c4c4c, #131313, vertical); // IE6-9
+@include background-image(linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%));
+
+}
+
+.countdownContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform : translateX(-50%) translateY(-50%);
+	text-align: center;
+	background: #ddd;
+	border: 1px solid #999;
+	padding: 10px;
+	box-shadow: 0 0 5px 3px #ccc;
+}
+
+.info {
+	font-size: 80px;
+}
