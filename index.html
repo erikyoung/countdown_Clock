@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 	</head>
-<body>
+<body onchange = 'changeColor(this);'>
 	<table class="countdownContainer">
 		<tr class="info">
 		<td colspan="4">My Next Birthday</td>
@@ -26,6 +26,8 @@
 			<td>Minutes</td>
 			<td>Seconds</td>
 		</tr>
+		
+
 	</table>
 
 	<script>
@@ -56,11 +58,31 @@
 		document.getElementById("seconds").textContent = s;
 
 		setTimeout(countdown, 1000); //activates the countdown
+
+
+
+
 		}
+
  countdown();
 
+ //change color on click 
+ //1) listen for a button click
+ //2) when button is clicked will need to say what we want to happen
+ //3) 
 
 	</script>
+
+	<script> 
+	var random = Math.floor(Math.random() * 6);
+		var color = new Array("green", "blue", "yellow", "black", "purple", "darkgreen" );
+		document.body.style.backgroundColor = color[random];
+
+	
+	
+	</script>
+
+	
 </body>
 
 </html>
