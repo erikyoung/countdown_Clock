@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css?family=Rokkitt:700" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 	</head>
 <body>
@@ -35,7 +34,7 @@
 
 	<table>
 		<tr class="todo">
-			<td colspan="4">What should I do till then? </td>
+			<td colspan="4" id="question" onmouseover="scaleUp()" onmouseout="returnToNormal()">What should I do till then? </td>
 		</tr>
 	</table>
 
@@ -50,6 +49,14 @@
 			var text = document.getElementById("title").style.backgroundColor = "";
 			var time = document.getElementById("time").style.backgroundColor = "";
 
+		}
+
+		function scaleUp() {
+			var scale = document.getElementById("question").style.fontSize = "100px";
+		}
+
+		function returnToNormal() {
+			var hello = document.getElementById("question").style.fontSize = "40px";
 		}
 
 	</script>
